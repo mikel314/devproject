@@ -7,8 +7,9 @@ Vagrant.configure("2") do |config|
 
   # Configurar recursos de la VM
   config.vm.provider "virtualbox" do |vb|
-    vb.memory = "2048"  # Asigna 2GB de RAM
-    vb.cpus = 2         # Asigna 2 núcleos de CPU
+	vb.name = "ubuntu_vagrant_VM"
+    	vb.memory = "2048"  # Asigna 2GB de RAM
+    	vb.cpus = 2         # Asigna 2 núcleos de CPU
 	vb.customize ["modifyvm", :id, "--snapshotfolder", "C:\Users\mikel\VirtualBox VMs"]
   end
 
