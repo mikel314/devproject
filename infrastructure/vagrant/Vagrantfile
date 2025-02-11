@@ -13,7 +13,7 @@ Vagrant.configure("2") do |config|
 	vb.customize ["modifyvm", :id, "--snapshotfolder", "C:\Users\mikel\VirtualBox VMs"]
   end
 
-  # Sincronizar una carpeta entre el host (Windows) y la VM
+  # Sincronizar una carpeta entre el host (Windows) y la VM.
   config.vm.synced_folder ".", "/home/vagrant/shared"
 
   # Comandos a ejecutar al iniciar la VM
