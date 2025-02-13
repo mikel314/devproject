@@ -1,4 +1,9 @@
 
+++ README.md del git ++
+- intro
+- como instalar git
+- como clonar el repo
+- como acceder a la documentacion
 
 ++ tools ++
 set up VS code
@@ -26,8 +31,16 @@ set up environments in VS code https://code.visualstudio.com/docs/python/environ
 
 ++ sphinx ++
 set up sphinx
-create dir
-create files
+    conda install sphinx
+    pip install sphinx-autobuild
+    pip install pylons_sphinx_themes
+    sudo apt install make
+    navigate to doc folder in repo. run sphinx-quickstart
+add autodoc
+    add extensions = ['sphinx.ext.autodoc'] in sources/conf.py
+how to create the doc
+how to build the doc
+    make clean
 
 
 
