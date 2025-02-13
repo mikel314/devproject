@@ -25,7 +25,8 @@ Vagrant.configure("2") do |config|
     echo "mikel:mikel" | sudo chpasswd
     sudo mkdir -p /home/mikel/.ssh
     sudo chmod 700 /home/mikel/.ssh
-	sudo chown mikel:mikel /home/mikel/.ssh
+	  sudo chown mikel:mikel /home/mikel/.ssh
+	  sudo usermod -aG sudo mikel
   SHELL
   
   config.vm.provision "shell" do |s|
