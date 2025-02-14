@@ -15,8 +15,9 @@ set up vagrant
 user sudo mikel
 ssh para poder conectar
 instalacion de software (miniconda)
-   
 gitignore
+
+
 
 ++ miniconda ++
 install https://docs.anaconda.com/miniconda/install/#quick-command-line-install
