@@ -33,7 +33,6 @@ set up environments in VS code https://code.visualstudio.com/docs/python/environ
 set up sphinx
     conda install sphinx
     pip install sphinx-autobuild
-    pip install pylons_sphinx_themes
     sudo apt install make
     navigate to doc folder in repo. run sphinx-quickstart
 add autodoc
