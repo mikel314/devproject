@@ -47,27 +47,41 @@ Si, en cambio, se desea crear un repositorio desde 0, se recomienda primero crea
 
 ## Git repo structure
 
-```
-project
-│   README.md
-│   file001.txt    
-│
-└───folder1
-│   │   file011.txt
-│   │   file012.txt
-│   │
-│   └───subfolder1
-│       │   file111.txt
-│       │   file112.txt
-│       │   ...
-│   
-└───folder2
-    │   file021.txt
-    │   file022.txt
-```
+Aunque no existe una estructura fija para proyectos de ML, la siguiente funciona generalmente bien:
 
+```
+/project_name
+│── data/                # Datos (crudos, procesados)
+│   ├── raw/             # Datos sin procesar
+│   ├── processed/       # Datos después de limpieza
+│   └── external/        # Datos de terceros (opcional)
+│
+│── notebooks/           # Jupyter Notebooks
+│
+│── src/                 # Código fuente del proyecto
+│
+│── models/              # Modelos entrenados (artefacto)
+│
+│── reports/             # Reportes y visualizaciones
+│
+│── tests/               # Tests unitarias
+│
+│── docs/                # Documentación
+│
+│── config/              # Archivos de configuración
+│
+│── infra/               # Infra as a code
+│
+│── .gitignore           # Ignorar archivos (datos grandes, logs)
+│── requirements.txt     # Dependencias del proyecto
+│── README.md            # Descripción del proyecto
+│── LICENSE              # Licencia del proyecto
+
+```
 
 ## Commandos básicos
+
+
 
 
 
