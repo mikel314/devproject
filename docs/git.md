@@ -2,6 +2,10 @@
 
 En esta sección se explica como se realizó el setup de git y se creo el repositorio, asi como un breve tutorial de las funcionalidades de git más utilizadas. 
 
+```console
+foo@bar:~$ whoami
+foo
+```
 
 ## Set up
 Git viene instalado por defecto en Ubuntu que es el OS de la VM donde se desarrolla el proyecto. En cualquier caso su instalación ser haría con 
