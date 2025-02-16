@@ -62,28 +62,28 @@ Una vez editado el ``Vagrantfile`` creamos la VM con
 
 Otros comandos útiles son los siguientes
 
-    * Apagar la VM
+* Apagar la VM
 
 ```bash
-        vagrant halt
+    vagrant halt
 ```
 
-    * Reiniciar la VM
+* Reiniciar la VM
 
 ```bash
-        vagrant reload
+    vagrant reload
 ```
 
-    * Destruir la VM
+* Destruir la VM
 
 ```bash
-        vagrant destroy -f
+     vagrant destroy -f
 ```
 
-    * Conectarse a la VM (a traves de Vagrant)
+* Conectarse a la VM (a traves de Vagrant)
 
 ```bash
-        vagrant ssh
+    vagrant ssh
 ```
 
 ## Conectarse a la VM
