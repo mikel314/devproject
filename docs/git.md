@@ -5,12 +5,12 @@ En esta sección se explica como se realizó el setup de git y se creo el reposi
 
 ## Set up
 Git viene instalado por defecto en Ubuntu que es el OS de la VM donde se desarrolla el proyecto. En cualquier caso su instalación ser haría con 
-```bash
+```console
 sudo apt update && sudo apt install git -y
 ```
 
 En caso de querer utilizar este repo como plantilla para desarrollar futuros proyectos, clonaríamos el repo en la carpeta deseada con:
-```bash
+```console
 git clone https://github.com/mikel314/devproject.git
 ```
 
@@ -28,22 +28,22 @@ Si, en cambio, se desea crear un repositorio desde 0, se recomienda primero crea
 
 2. Clonar el Repositorio en Linux
     * Ve a la carpeta donde quieres clonar el repositorio, por ejemplo:
-    ```bash
+    ```console
         cd ~/Proyectos
     ```
     * Clona el repositorio con ``git clone``:
-    ```bash
+    ```console
         git clone https://github.com/tu-usuario/mi-proyecto.git
     ```
 
 3. Confirmar que el repositorio está bien clonado
     * Para verificar que todo está correcto puedes ejecutar ``git status``
     * Si todo salió bien, verás algo como:
-    ```bash
-    On branch main
-    Your branch is up to date with 'origin/main'.
+    ```console
+        On branch main
+        Your branch is up to date with 'origin/main'.
 
-    nothing to commit, working tree clean
+        nothing to commit, working tree clean
     ```
 
 ## Git repo structure
