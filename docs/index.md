@@ -8,16 +8,23 @@ Este sitio web contiene la documentación del repositorio Devproject, el objetiv
 
 El código y los datos seran random/dummy, la idea es construir un cascaron vacío pero configurando todas las herramientas relevantes y siguiendo *best practices*.
 
-Se recomienda seguir los puntos del índice por orden, empezando por el [Overview](overview.md), donde se describr la arquitectura general del proyecto. Y siguiendo por el bloque con las herramientas imprescindibles de desarrollo ([Git y Github](git.md), [Virtual machines](vagrant.md), [Visual Studio Code](vscode.md))
+Se recomienda leer el overview siguiente antes y seguir con los puntos del índice por orden, empezando por el bloque con las herramientas imprescindibles de desarrollo ([Git y Github](git.md), [Virtual machines](vagrant.md), [Visual Studio Code](vscode.md))
 
-El resto de la documentación debería ser bastante independiente.
+El resto de la documentación debería ser relativamente independiente.
 
-## Indice
-* [Overview](overview.md)
+## Overview
+
+El desarrollo de este proyecto se realizó en una máquina fisica personal con **Windows 10**. Con el objetivo de evitar problemas con el *test&learn* propio de este proyecto y dado las limitaciones de Windows como OS de desarrollo, se optó por la creación de una máquina virtual **Linux** desplegada con **Virtualbox**.
+
+El ide de desarrollo elegido fue **VS code** conectandose de forma remota a la maquina virtual y a **Github** en la nube. En las siguientes capitulos se describe el detalle de estas configuraciones.
+
+Aunque la VM se podría haber creado manualmente, se dedició usar **Vagrant** como *infrastructure as a code* con el fin de aprender la tecnología y facilitar el re-despliegue esperado de la VM.
+
+## Contenidos
 * [Git y Github](git.md)
 * [Virtual machines](vagrant.md)
 * [Visual Studio Code](vscode.md)
-* []()
+* [Miniconda](miniconda.md)
 * []()
 * []()
 * []()
