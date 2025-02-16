@@ -40,10 +40,10 @@ Si, en cambio, se desea crear un repositorio desde 0, se recomienda primero crea
     * Para verificar que todo está correcto puedes ejecutar ``git status``
     * Si todo salió bien, verás algo como:
     ```bash
-    	On branch main
-        Your branch is up to date with 'origin/main'.
+    On branch main
+    Your branch is up to date with 'origin/main'.
 
-        nothing to commit, working tree clean
+    nothing to commit, working tree clean
     ```
 
 ## Git repo structure
