@@ -2,11 +2,6 @@
 
 En esta sección se explica como se realizó el setup de git y se creo el repositorio, asi como un breve tutorial de las funcionalidades de git más utilizadas. 
 
-```console
-foo@bar:~$ whoami
-foo
-```
-
 ## Set up
 Git viene instalado por defecto en Ubuntu que es el OS de la VM donde se desarrolla el proyecto. En cualquier caso su instalación ser haría con 
 ```console
@@ -20,7 +15,7 @@ git clone https://github.com/mikel314/devproject.git
 
 Si, en cambio, se desea crear un repositorio desde 0, se recomienda primero crearlo en la web de Github y clonarlo en local para editarlo despúes. Para ello:
 
-1. Crear un Repositorio en GitHub  
+1. **Crear un Repositorio en GitHub**
     * Accede a GitHub e inicia sesión en https://github.com.
     * Haz clic en el botón "New" 
     * Crea un nombre para tu repositorio, por ejemplo: mi-proyecto.
@@ -30,7 +25,7 @@ Si, en cambio, se desea crear un repositorio desde 0, se recomienda primero crea
     * Elige crear nn archivo .gitignore.
     * Haz clic en "Create repository".
 
-2. Clonar el Repositorio en Linux
+2. **Clonar el Repositorio en Linux**
     * Ve a la carpeta donde quieres clonar el repositorio, por ejemplo:
     ```console
         cd ~/Proyectos
@@ -40,7 +35,7 @@ Si, en cambio, se desea crear un repositorio desde 0, se recomienda primero crea
         git clone https://github.com/tu-usuario/mi-proyecto.git
     ```
 
-3. Confirmar que el repositorio está bien clonado
+3. **Confirmar que el repositorio está bien clonado**
     * Para verificar que todo está correcto puedes ejecutar ``git status``
     * Si todo salió bien, verás algo como:
     ```console
@@ -51,6 +46,25 @@ Si, en cambio, se desea crear un repositorio desde 0, se recomienda primero crea
     ```
 
 ## Git repo structure
+
+```
+project
+│   README.md
+│   file001.txt    
+│
+└───folder1
+│   │   file011.txt
+│   │   file012.txt
+│   │
+│   └───subfolder1
+│       │   file111.txt
+│       │   file112.txt
+│       │   ...
+│   
+└───folder2
+    │   file021.txt
+    │   file022.txt
+```
 
 
 ## Commandos básicos

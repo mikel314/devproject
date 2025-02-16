@@ -20,13 +20,13 @@ En este caso la instalción es en Windows dado que el host de toda la infra es W
 1.  Descargar e instalar Vagrant desde https://www.vagrantup.com/
 2.  Crear la carpeta que contendrá la configuración de la VM. En este caso la incluimos dentro del repositorio git en la carpeta infraestructura.
 
-```bash
+```console
     mkdir vagrant && cd vagrant
 ```
 
 3.  Crear el ``Vagrantfile`` en la carpeta del proyecto. Este archivo contiene una especificación muy basica de la VM.
 
-```bash
+```console
     vagrant init ubuntu/focal64
 ```
 
@@ -56,7 +56,7 @@ A continuación se presenta el archivo ``Vagrantfile`` del proyecto con los come
 
 Una vez editado el ``Vagrantfile`` creamos la VM con 
 
-```bash
+```console
     vagrant up
 ```
 
@@ -64,25 +64,25 @@ Otros comandos útiles son los siguientes
 
 * Apagar la VM
 
-```bash
+```console
     vagrant halt
 ```
 
 * Reiniciar la VM
 
-```bash
+```console
     vagrant reload
 ```
 
 * Destruir la VM
 
-```bash
+```console
      vagrant destroy -f
 ```
 
 * Conectarse a la VM (a traves de Vagrant)
 
-```bash
+```console
     vagrant ssh
 ```
 
@@ -90,20 +90,20 @@ Otros comandos útiles son los siguientes
 
 Finalmente, comprobamos que la VM se ha creado correctamente y que podemos acceder a ella.
 
-```bash
+```console
         ssh -i ~/.ssh/ubuntu_server_key mikel@192.168.56.10
 ```
 
 Para poder conectar sin especificar siempre la clave privada, y para facilitar la conexión por VS code. Ejecutamos:
 
-```bash
+```console
         ssh-add ~/.ssh/ubuntu_server_key
 ```
 
 Tendremos que tener instalado el ssh-agent par ello.
 Ahora ya podremos acceder directamente con
 
-```bash
+```console
         ssh mikel@192.168.56.10
 ```
 
