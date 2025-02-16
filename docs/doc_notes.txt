@@ -1,0 +1,55 @@
+
+++ README.md del git ++
+- intro
+- como instalar git
+- como clonar el repo
+- como acceder a la documentacion
+
+++ tools ++
+set up VS code
+virtualBox
+Git repo, and clone
+
+++ vagrant ++
+set up vagrant
+user sudo mikel
+ssh para poder conectar
+instalacion de software (miniconda)
+gitignore
+
+
+
+++ miniconda ++
+install https://docs.anaconda.com/miniconda/install/#quick-command-line-install
+set up environments
+    activate
+install pip
+    conda install pip
+set up requerinments
+    pip freeze > requirements.txt
+set up environments in VS code https://code.visualstudio.com/docs/python/environments
+
+
+++ sphinx ++
+set up sphinx
+    conda install sphinx
+    pip install sphinx-autobuild
+    sudo apt install make
+    navigate to doc folder in repo. run sphinx-quickstart
+add autodoc
+    add extensions = ['sphinx.ext.autodoc'] in sources/conf.py
+how to create the doc
+how to build the doc
+    make clean
+    gitignore el build
+
+
+
+
+
+
+
+
+
+
+
