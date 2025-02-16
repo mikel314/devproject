@@ -1,16 +1,19 @@
 
-++ README.md del git ++
-- intro
+
+++ index.md del git ++
+
+- intro2
+
+
+++ git ++
 - como instalar git
 - como clonar el repo
-- como acceder a la documentacion
 
-++ tools ++
+++ VS code ++
 set up VS code
-virtualBox
-Git repo, and clone
 
-++ vagrant ++
+++ infraestructura y vagrant ++
+virtualBox
 set up vagrant
 user sudo mikel
 ssh para poder conectar

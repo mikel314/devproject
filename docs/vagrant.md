@@ -1,6 +1,6 @@
 # Set up VM with vagrant
 
-## Introduction
+## Introducción
 
 Vagrant permite crear maquina virtuales mediante codigo, como Terraform pero para entornos locales. En este caso la crearemos sobre un Virtualbox.
 Tambien permite instalar aplicaciones en la VM en el momento de la creación.
