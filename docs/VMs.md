@@ -79,6 +79,11 @@ El ``Vagrantfile`` contendrá toda la configuración de la VM:
 
 Puedes encontrar el arhivo [Vagrantfile](./../infra/vagrant/Vagrantfile) en este mismo repositorio en la carpeta ``infra/vagrant/`` con los comentarios en el código.
 
+## Scrip shell post_installs.sh
+
+
+
+
 ## Ejecutar Vagrant y crear la VM
 
 Una vez editado el ``Vagrantfile`` creamos la VM con 
