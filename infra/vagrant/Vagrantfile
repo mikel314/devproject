@@ -7,10 +7,10 @@ Vagrant.configure("2") do |config|
 
   # Configurar recursos de la VM
   config.vm.provider "virtualbox" do |vb|
-	vb.name = "ubuntu_vagrant_VM"
+	  vb.name = "ubuntu_vagrant_VM" #nombre de la maquina como se vera en Virtualbox
     vb.memory = "2048"  # Asigna 2GB de RAM
     vb.cpus = 2         # Asigna 2 núcleos de CPU
-	vb.customize ["modifyvm", :id, "--snapshotfolder", "C:\Users\mikel\VirtualBox VMs"]
+	  vb.customize ["modifyvm", :id, "--snapshotfolder", "C:\Users\mikel\VirtualBox VMs"] # cambia la ruta del archivo de la VM
   end
 
   # Sincronizar una carpeta entre el host (Windows) y la VM.
@@ -18,22 +18,28 @@ Vagrant.configure("2") do |config|
 
   # Comandos a ejecutar al iniciar la VM
   config.vm.provision "shell", inline: <<-SHELL
-    sudo apt-get update -y
+    #actualizar el SO
+    sudo apt-get update -y 
     sudo apt-get upgrade -y
 	
+    #crear usuario mikel
 	  sudo useradd -m -s /bin/bash mikel
     echo "mikel:mikel" | sudo chpasswd
+    #crear carpeta .ssh para recibir la clave publica
     sudo mkdir -p /home/mikel/.ssh
     sudo chmod 700 /home/mikel/.ssh
 	  sudo chown mikel:mikel /home/mikel/.ssh
+    #anyadir mikel al grupo sudo
 	  sudo usermod -aG sudo mikel
 
+    #instalar miniconda
     sudo mkdir -p /home/mikel/miniconda3
     sudo wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O /home/mikel/miniconda3/miniconda.sh
     sudo bash /home/mikel/miniconda3/miniconda.sh -b -u -p /home/mikel/miniconda3
     sudo rm /home/mikel/miniconda3/miniconda.sh
   SHELL
   
+  # copiar la clave publica en authorized_keys
   config.vm.provision "shell" do |s|
 	ssh_pub_key = File.readlines("C:/users/mikel/.ssh/ubuntu_server_key.pub").first.strip
 	s.inline = <<-SHELL

@@ -1,6 +1,7 @@
 # Git and Github
 
 En esta sección se explica como se realizó el setup de git y se creo el repositorio, asi como un breve tutorial de las funcionalidades de git más utilizadas. 
+En [este](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners) enlace hay un tuturial básico bastate bueno.
 
 ## Set up
 Git viene instalado por defecto en Ubuntu que es el OS de la VM donde se desarrolla el proyecto. En cualquier caso su instalación ser haría con 
@@ -70,7 +71,7 @@ Aunque no existe una estructura fija para proyectos de ML, la siguiente funciona
 │
 │── config/              # Archivos de configuración
 │
-│── infra/               # Infra as a code
+│── infra/               # Infrastructure as a code
 │
 │── .gitignore           # Ignorar archivos (datos grandes, logs)
 │── requirements.txt     # Dependencias del proyecto
@@ -81,7 +82,15 @@ Aunque no existe una estructura fija para proyectos de ML, la siguiente funciona
 
 ## Commandos básicos
 
+La funcionalidad elmental y que más veces se estará usando es la de hacer un commit y subir los cambios al repositorio de Github.
+```console
+git add files_or_folder
+git commit -m "meaningful message"
+git push
+```
+Podemos comprobar el estado de la sincronización con ``git status``
 
+VS Code tiene una interfaz para gestionar git que se explica en la sección correspondiente.
 
 
 
