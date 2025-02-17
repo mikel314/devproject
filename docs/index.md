@@ -1,7 +1,3 @@
----
-layout: page 
----
-
 # Welcome to the devproject's documentation!
 
 Este sitio web contiene la documentación del repositorio Devproject, el objetivo de éste es incluir las principales herramientas de data engineering asociadas a un proyecto de Machine Learning.

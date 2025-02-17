@@ -77,16 +77,7 @@ El ``Vagrantfile`` contendrá toda la configuración de la VM:
 * 
 * 
 
-A continuación se describe el archivo ``Vagrantfile`` del proyecto con los comentarios en el código.
-
-{% capture code %}
-  {{ site.baseurl | append: "/../infra/vagrant/Vagrantfile" | read }}
-{% endcapture %}
-
-```python
-{{ code }}
-```
-
+Puedes encontrar el arhivo [Vagrantfile](./../infra/vagrant/Vagrantfile) en este mismo repositorio en la carpeta ``infra/vagrant/`` con los comentarios en el código.
 
 ## Ejecutar Vagrant y crear la VM
 
