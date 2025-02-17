@@ -4,6 +4,7 @@ echo "Creado entorno virtual con conda"
 
 # Activar Conda
 source /home/mikel/miniconda3/bin/activate
+conda init --all
 
 # Crear un entorno Conda (si no existe)
 conda create --name MLenv python=3.13 -y
