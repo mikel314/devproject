@@ -48,7 +48,8 @@ Vagrant.configure("2") do |config|
 	sudo -u mikel -i git config --global user.name mikel314
 	
 	#ejecutar scrip shell con los comandos que no deja ejecutar bien desde el vagrant. Ver doc
-	sudo chmod +x /home/mikel/devproject/infra/post_installs.sh
+	echo "Ejecutando script post_ionstalls.sh"
+  sudo chmod +x /home/mikel/devproject/infra/post_installs.sh
 	sudo -u mikel -i /home/mikel/devproject/infra/post_installs.sh
 
   SHELL
