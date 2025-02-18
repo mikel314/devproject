@@ -20,9 +20,9 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: <<-SHELL
     #actualizar el SO
 	echo "Actualizando SO..."
-    sudo apt-get update -y 
+    sudo apt-get update -y
     sudo apt-get upgrade -y
-	
+
     #crear usuario mikel
 	echo "Creando usuario mikel..."
 	  sudo useradd -m -s /bin/bash mikel
@@ -40,20 +40,20 @@ Vagrant.configure("2") do |config|
     sudo -u mikel -i wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O /home/mikel/miniconda3/miniconda.sh
     sudo -u mikel -i bash /home/mikel/miniconda3/miniconda.sh -b -u -p /home/mikel/miniconda3
     sudo -u mikel -i rm /home/mikel/miniconda3/miniconda.sh
-	
+
 	#clonar el repo con el user mikel
 	echo "Clonando repositorio..."
 	sudo -u mikel -i git clone https://github.com/mikel314/devproject
 	sudo -u mikel -i git config --global user.email mikel314@gmail.com
 	sudo -u mikel -i git config --global user.name mikel314
-	
+
 	#ejecutar scrip shell con los comandos que no deja ejecutar bien desde el vagrant. Ver doc
 	echo "Ejecutando script post_ionstalls.sh"
   sudo chmod +x /home/mikel/devproject/infra/post_installs.sh
 	sudo -u mikel -i /home/mikel/devproject/infra/post_installs.sh
 
   SHELL
-  
+
   # copiar la clave publica en authorized_keys
   config.vm.provision "shell" do |s|
 	ssh_pub_key = File.readlines("C:/users/mikel/.ssh/ubuntu_server_key.pub").first.strip
@@ -62,5 +62,5 @@ Vagrant.configure("2") do |config|
 	echo #{ssh_pub_key} >> /root/.ssh/authorized_keys
 	SHELL
   end
-  
+
 end

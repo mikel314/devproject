@@ -33,5 +33,3 @@ Una vez activado, todos los archivos .md de la carpeta ``docs/`` seran transform
 Es recomendable crear un [index.md](index.md) con la estructura de la documentación y los links al resto de páginas.
 
 Los archivos de documentación estan escritos en Markdowns, este [tutorial para principiantes](https://hackernoon.com/a-beginners-guide-to-markdown-everything-you-need-to-know-to-get-started) está bien para aprender lo básico. También es útil leer [cómo crear code bloks](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks) ya que es algo que usaremos mucho en una documentación de un proyecto de desarrollo.
-
-

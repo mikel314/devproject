@@ -11,9 +11,5 @@ En dichos tutoriales se ira pidiendo que se instalen extensiones que son útiles
 * [Remote - ssh](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)
 * [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 * [Jypyter notebooks](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
-* 
-* 
-
-
-
-
+*
+*

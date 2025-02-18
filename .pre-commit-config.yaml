@@ -1,0 +1,24 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: trailing-whitespace  # Elimina espacios en blanco innecesarios
+      - id: end-of-file-fixer  # Asegura que los archivos terminen con una línea en blanco
+      - id: check-yaml  # Verifica que los archivos YAML sean válidos
+      - id: check-ast  # Verifica que los archivos Python sean sintácticamente correctos
+
+  - repo: https://github.com/psf/black
+    rev: 23.12.1
+    hooks:
+      - id: black  # Formatea archivos Python con Black
+
+  - repo: https://github.com/PyCQA/flake8
+    rev: 6.1.0
+    hooks:
+      - id: flake8  # Analiza el código en busca de errores de estilo y sintaxis
+
+  - repo: https://github.com/nbQA-dev/nbQA
+    rev: 1.7.0
+    hooks:
+      - id: nbqa-black  # Formatea notebooks Jupyter con Black
+      - id: nbqa-flake8  # Aplica Flake8 a notebooks

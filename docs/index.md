@@ -33,5 +33,4 @@ Aunque la VM se podría haber creado manualmente, se dedició usar **Vagrant** c
 * []()
 * []()
 * []()
-* []() 
-
+* []()

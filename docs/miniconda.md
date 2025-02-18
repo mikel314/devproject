@@ -29,11 +29,11 @@ Una vez instalado, podremos crear un entorno nuevo con:
 ```console
 conda create -n mi_entorno python=3.12.9
 ```
-(o la versión de python que desees). 
+(o la versión de python que desees).
 
 Una vez creado se activa con:
 ```console
-conda activate mi_entorno 
+conda activate mi_entorno
 ```
 Una vez creado y activado podemos instalar paquetes con ``conda install pkg_name`` o tambien con ``pip install pkg_name`` tras instalar el pip con ``conda install pip`` (recomendado)
 
@@ -50,6 +50,3 @@ pip freeze > requirements.txt
 ## Conda environments desde VS code
 
 En el tutorial [Python environments in VS Code](https://code.visualstudio.com/docs/python/environments) se puede consultar como elegir y gestionar los diferentes environmetns desde VS Code
-
-
-

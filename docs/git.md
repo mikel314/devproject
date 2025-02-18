@@ -1,10 +1,10 @@
 # Git and Github
 
-En esta sección se explica como se realizó el setup de git y se creo el repositorio, asi como un breve tutorial de las funcionalidades de git más utilizadas. 
+En esta sección se explica como se realizó el setup de git y se creo el repositorio, asi como un breve tutorial de las funcionalidades de git más utilizadas.
 En [este](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners) enlace hay un tuturial básico bastate bueno.
 
 ## Set up
-Git viene instalado por defecto en Ubuntu que es el OS de la VM donde se desarrolla el proyecto. En cualquier caso su instalación ser haría con 
+Git viene instalado por defecto en Ubuntu que es el OS de la VM donde se desarrolla el proyecto. En cualquier caso su instalación ser haría con
 ```console
 sudo apt update && sudo apt install git -y
 ```
@@ -18,7 +18,7 @@ Si, en cambio, se desea crear un repositorio desde 0, se recomienda primero crea
 
 1. **Crear un Repositorio en GitHub**
     * Accede a GitHub e inicia sesión en https://github.com.
-    * Haz clic en el botón "New" 
+    * Haz clic en el botón "New"
     * Crea un nombre para tu repositorio, por ejemplo: mi-proyecto.
     * (Opcional) Agrega una descripción.
     * Elige la visibilidad (Público para usar Github pages como documentación)
@@ -91,7 +91,3 @@ git push
 Podemos comprobar el estado de la sincronización con ``git status``
 
 VS Code tiene una interfaz para gestionar git que se explica en la sección correspondiente.
-
-
-
-

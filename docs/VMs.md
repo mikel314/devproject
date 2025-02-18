@@ -53,7 +53,7 @@ Para ello, abrimos el ``cmd`` y ejecutamos
 ssh-keygen
 ```
 Las claves se guardan por defecto (recomendado) en la carpeta .ssh del home del usuario que las crea.
-En este caso les dimos el nombre ``ubuntu_server_key`` 
+En este caso les dimos el nombre ``ubuntu_server_key``
 Cuando pida password apretamos enter para no crearlas con password (las claves en sí mismas ya son la seguridad)
 
 La clave pública (acabada en .pub) es la que tenemos que copiar en la VM a la que queraoms contectar desde el Windows.
@@ -74,8 +74,8 @@ El ``Vagrantfile`` contendrá toda la configuración de la VM:
 * Creación del usuario mikel con permisos de sudo
 * Copia de la clave publica para poder conectar por ssh
 * Instalación de miniconda
-* 
-* 
+*
+*
 
 Puedes encontrar el arhivo [Vagrantfile](./../infra/vagrant/Vagrantfile) en este mismo repositorio en la carpeta ``infra/vagrant/`` con los comentarios en el código.
 
@@ -108,7 +108,7 @@ pip install -r /home/mikel/devproject/requeriments.txt -y
 
 echo "El entorno MLenv ha sido activado."
 ```
-Este script es ejecutado desde el Vagrantfile con 
+Este script es ejecutado desde el Vagrantfile con
 
 ```console
 sudo chmod +x /home/mikel/devproject/infra/post_installs.sh
@@ -117,7 +117,7 @@ sudo -u mikel -i /home/mikel/devproject/infra/post_installs.sh
 
 ## Ejecutar Vagrant y crear la VM
 
-Una vez editado el ``Vagrantfile`` creamos la VM con 
+Una vez editado el ``Vagrantfile`` creamos la VM con
 
 ```console
     vagrant up
@@ -169,4 +169,3 @@ Ahora ya podremos acceder directamente con
 ```console
         ssh mikel@192.168.56.10
 ```
-
