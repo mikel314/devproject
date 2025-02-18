@@ -18,9 +18,10 @@ Aunque la VM se podría haber creado manualmente, se dedició usar **Vagrant** c
 
 ## Contenidos
 * [Git y Github](git.md)
-* [Virtual machines](VMs.md)
-* [Visual Studio Code](vscode.md)
-* [Miniconda](miniconda.md)
+* Virtual machines con [Vagrant](VMs.md)
+* Ide de desarrollo: [Visual Studio Code](vscode.md)
+* Documentación con [Github pages y Jekyll](githubpages.md)
+* Entornos virtuales con [Miniconda](miniconda.md)
 * []()
 * []()
 * []()

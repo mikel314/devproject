@@ -81,8 +81,39 @@ Puedes encontrar el arhivo [Vagrantfile](./../infra/vagrant/Vagrantfile) en este
 
 ## Scrip shell post_installs.sh
 
+No he sido capaz de activar conda para el usuario mikel desde el usuario vagrant directamente en el ``Vagrantfile``. Una solución ha sido incluir todos los comandos de activación de conda y creación del entorno python en un *shell script* y ejecutarlo como usuario mikel desde el vagrant.
 
+El script shell ``post_installs.sh`` de la carpeta ``infra`` contiene las instrucciones descritas en la [documentación de miniconda](miniconda.md).
 
+```bash
+#!/bin/bash
+
+echo "Creado entorno virtual con conda"
+
+# Activar Conda
+source /home/mikel/miniconda3/bin/activate
+conda init --all
+
+# Crear un entorno Conda (si no existe)
+conda create --name MLenv python=3.13 -y
+
+# Activar el entorno recién creado
+conda activate MLenv
+
+# Opcional: Instalar paquetes en el entorno
+conda install pip -y
+
+# instalamos los paquetes del proyecto
+pip install -r /home/mikel/devproject/requeriments.txt -y
+
+echo "El entorno MLenv ha sido activado."
+```
+Este script es ejecutado desde el Vagrantfile con 
+
+```console
+sudo chmod +x /home/mikel/devproject/infra/post_installs.sh
+sudo -u mikel -i /home/mikel/devproject/infra/post_installs.sh
+```
 
 ## Ejecutar Vagrant y crear la VM
 
