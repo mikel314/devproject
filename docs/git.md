@@ -21,14 +21,16 @@ Si, en cambio, se desea crear un repositorio desde 0, se recomienda primero crea
 
 1. **Crear un Repositorio en GitHub**
 
-   - Accede a GitHub e inicia sesión en https://github.com.
-   - Haz clic en el botón "New"
-   - Crea un nombre para tu repositorio, por ejemplo: mi-proyecto.
-   - (Opcional) Agrega una descripción.
-   - Elige la visibilidad (Público para usar Github pages como documentación)
-   - Elige crear nn archivo README.md.
-   - Elige crear nn archivo .gitignore.
-   - Haz clic en "Create repository".
+Prueba hooks
+
+- Accede a GitHub e inicia sesión en https://github.com.
+- Haz clic en el botón "New"
+- Crea un nombre para tu repositorio, por ejemplo: mi-proyecto.
+- (Opcional) Agrega una descripción.
+- Elige la visibilidad (Público para usar Github pages como documentación)
+- Elige crear nn archivo README.md.
+- Elige crear nn archivo .gitignore.
+- Haz clic en "Create repository".
 
 2. **Clonar el Repositorio en Linux**
 
