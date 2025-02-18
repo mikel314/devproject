@@ -19,33 +19,40 @@ Para instalar miniconda en la VM con:
     sudo rm /home/mikel/miniconda3/miniconda.sh
 ```
 
-Esta instalación no añade ``conda`` al ``PATH`` ni activa el miniconda. Para ello es necesario hacer (solo la primera vez)
+Esta instalación no añade `conda` al `PATH` ni activa el miniconda. Para ello es necesario hacer (solo la primera vez)
+
 ```console
 source /home/mikel/miniconda3/bin/activate
 conda init --all
 ```
 
 Una vez instalado, podremos crear un entorno nuevo con:
+
 ```console
 conda create -n mi_entorno python=3.12.9
 ```
+
 (o la versión de python que desees).
 
 Una vez creado se activa con:
+
 ```console
 conda activate mi_entorno
 ```
-Una vez creado y activado podemos instalar paquetes con ``conda install pkg_name`` o tambien con ``pip install pkg_name`` tras instalar el pip con ``conda install pip`` (recomendado)
+
+Una vez creado y activado podemos instalar paquetes con `conda install pkg_name` o tambien con `pip install pkg_name` tras instalar el pip con `conda install pip` (recomendado)
 
 Si queremos instalar los paquetes desde un archivo de requeriments, con el entorno activado ejecutaremos
+
 ```console
 pip install -r ruta_al_requeriments.txt
 ```
+
 Si en cambio, queremos actualizar el requeriments a medida que vayamos instalando paquetes, haremos:
+
 ```console
 pip freeze > requirements.txt
 ```
-
 
 ## Conda environments desde VS code
 

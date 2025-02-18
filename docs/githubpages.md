@@ -6,17 +6,17 @@ GitHub Pages es un servicio de alojamiento de sitios web estáticos proporcionad
 
 En este proyecto se usuaran muy pocas de las funcionalidades de Githubpagesc con Jekyll, para una documentación completa se puede visitar el tuturial [Setting up a GitHub Pages site with Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll)
 
-
 ## Setup
 
 No es necesario isntalar nada ni en local ni en la VM para trabajar con Github pages. Todo se ejecuta en el reposistorio de Github en la nube. Para habilitarlo basta con:
 
-* Ve a Settings → Pages dentro de tu repositorio en GitHub.
-* En la sección "Source", selecciona la rama main y la carpeta docs/ y haz clic en "Save".
-* GitHub generará automáticamente tu sitio en https://tu-usuario.github.io/tu-repositorio/.
+- Ve a Settings → Pages dentro de tu repositorio en GitHub.
+- En la sección "Source", selecciona la rama main y la carpeta docs/ y haz clic en "Save".
+- GitHub generará automáticamente tu sitio en https://tu-usuario.github.io/tu-repositorio/.
 
 ## Set up Jekyll
-Crea y modifica el archivo _config.yml de la carpeta docs/ para personalizar el sitio web.
+
+Crea y modifica el archivo \_config.yml de la carpeta docs/ para personalizar el sitio web.
 Ejemplo de configuración básica:
 
 ```yaml
@@ -24,11 +24,13 @@ title: "Mi Blog con Jekyll"
 description: "Documentación generado con Jekyll y alojado en GitHub Pages"
 theme: jekyll-theme-minimal
 ```
+
 Para cambiar el diseño, puedes usar temas compatibles con GitHub Pages:
 [Lista de temas soportados](https://pages.github.com/themes/)
 
 ## Crear documentación
-Una vez activado, todos los archivos .md de la carpeta ``docs/`` seran transformados en htmls visualizables en la url https://tu-usuario.github.io/tu-repositorio/ de forma totalmente transparente al usuario.
+
+Una vez activado, todos los archivos .md de la carpeta `docs/` seran transformados en htmls visualizables en la url https://tu-usuario.github.io/tu-repositorio/ de forma totalmente transparente al usuario.
 
 Es recomendable crear un [index.md](index.md) con la estructura de la documentación y los links al resto de páginas.
 
