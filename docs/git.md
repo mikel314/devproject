@@ -21,8 +21,6 @@ Si, en cambio, se desea crear un repositorio desde 0, se recomienda primero crea
 
 1. **Crear un Repositorio en GitHub**
 
-Prueba hooks
-
 - Accede a GitHub e inicia sesión en https://github.com.
 - Haz clic en el botón "New"
 - Crea un nombre para tu repositorio, por ejemplo: mi-proyecto.
