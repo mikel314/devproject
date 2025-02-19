@@ -35,3 +35,9 @@ print(days_between_dates(date1, date2))  # Output: 11
 
 def add(a, b):
     return a + b
+
+
+b = 1
+print("Testing new branch in git!")
+b = b + a
+print(b)
