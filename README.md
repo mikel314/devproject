@@ -8,6 +8,7 @@ En particular:
 
 - Git y Github como control de versiones
 - VS code como ide de desarrollo
+- Copilot como IA assistant
 - Vagrant y Virtualbox como _infrastructure as a code_ para desplegar la VM
 - Miniconda como gestor de entornos virtuales de Python
 - Github pages y Jekyll con archivos .md como documentación

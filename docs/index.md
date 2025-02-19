@@ -21,6 +21,7 @@ Although the VM could have been created manually, it was decided to use **Vagran
 - [Git and Github](git.md)
 - Virtual machines with [Vagrant](VMs.md)
 - Development IDE: [Visual Studio Code](vscode.md)
+- IA assistant with [Copilot](copilot.md)
 - Documentation with [Github pages and Jekyll](githubpages.md)
 - Virtual environments with [Miniconda](miniconda.md)
 - []()
