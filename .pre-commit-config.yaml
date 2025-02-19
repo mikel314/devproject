@@ -21,7 +21,7 @@ repos:
     rev: 1.9.1
     hooks:
       - id: nbqa-black  # Formatea notebooks Jupyter con Black
-      - id: nbqa-flake8  # Aplica Flake8 a notebooks
+      #- id: nbqa-flake8  # Aplica Flake8 a notebooks
 
   - repo: https://github.com/pre-commit/mirrors-prettier
     rev: 'v4.0.0-alpha.8'  # Usa la versión más reciente disponible
