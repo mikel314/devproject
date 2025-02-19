@@ -20,6 +20,7 @@ def days_between_dates(date1, date2):
 a = 1
 print("Hello World!")
 print("How are you?")
+print(a)
 a = a + 1
 print("Doing well?")
 print("Good bye World!")
@@ -30,3 +31,7 @@ print(a)
 date1 = "2025-02-18"
 date2 = "2025-03-01"
 print(days_between_dates(date1, date2))  # Output: 11
+
+
+def add(a, b):
+    return a + b
