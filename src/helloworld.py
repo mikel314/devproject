@@ -41,3 +41,7 @@ b = 1
 print("Testing new branch in git!")
 b = b + a
 print(b)
+
+
+def subtract(a, b):
+    return a - b
