@@ -102,4 +102,10 @@ git push
 
 We can check the synchronization status with `git status`.
 
-VS Code has an interface to manage Git, which is explained in the corresponding section.
+## Basic Branching and Merging
+
+For a basic understanding of how to manage different branches and how to merge them an resolve conflicts, please visite the tutorial [Git Branching - Basic Branching and Merging](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
+
+## Visual Studio code
+
+Git can be managed directly from VS code interface. In the [Using Git source control in VS Code](https://code.visualstudio.com/docs/sourcecontrol/overview) tutorial you can learn how to add, commit, merge etc directly from the UI or how to interpret the info displayed.
