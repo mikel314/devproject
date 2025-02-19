@@ -1,98 +1,98 @@
-# Git and Github
+# Git and GitHub
 
-En esta sección se explica como se realizó el setup de git y se creo el repositorio, asi como un breve tutorial de las funcionalidades de git más utilizadas.
-En [este](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners) enlace hay un tuturial básico bastate bueno.
+This section explains how to set up Git and create the repository, as well as a brief tutorial on the most commonly used Git functionalities.
+In [this](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners) link, there is a pretty good basic tutorial.
 
 ## Set up
 
-Git viene instalado por defecto en Ubuntu que es el OS de la VM donde se desarrolla el proyecto. En cualquier caso su instalación ser haría con
+Git comes pre-installed on Ubuntu, which is the OS of the VM where the project is developed. In any case, its installation would be done with:
 
 ```console
 sudo apt update && sudo apt install git -y
 ```
 
-En caso de querer utilizar este repo como plantilla para desarrollar futuros proyectos, clonaríamos el repo en la carpeta deseada con:
+If you want to use this repo as a template for developing future projects, you would clone the repo into the desired folder with:
 
 ```console
 git clone https://github.com/mikel314/devproject.git
 ```
 
-Si, en cambio, se desea crear un repositorio desde 0, se recomienda primero crearlo en la web de Github y clonarlo en local para editarlo despúes. Para ello:
+If, on the other hand, you want to create a repository from scratch, it is recommended to first create it on the GitHub website and then clone it locally to edit it. To do this:
 
-1. **Crear un Repositorio en GitHub**
+1. **Create a Repository on GitHub**
 
-- Accede a GitHub e inicia sesión en https://github.com.
-- Haz clic en el botón "New"
-- Crea un nombre para tu repositorio, por ejemplo: mi-proyecto.
-- (Opcional) Agrega una descripción.
-- Elige la visibilidad (Público para usar Github pages como documentación)
-- Elige crear nn archivo README.md.
-- Elige crear nn archivo .gitignore.
-- Haz clic en "Create repository".
+- Go to GitHub and log in at https://github.com.
+- Click on the "New" button.
+- Create a name for your repository, for example: my-project.
+- (Optional) Add a description.
+- Choose the visibility (Public to use GitHub pages as documentation).
+- Choose to create a README.md file.
+- Choose to create a .gitignore file.
+- Click on "Create repository".
 
-2. **Clonar el Repositorio en Linux**
+2. **Clone the Repository on Linux**
 
-   - Ve a la carpeta donde quieres clonar el repositorio, por ejemplo:
+   - Go to the folder where you want to clone the repository, for example:
 
    ```console
-       cd ~/Proyectos
+        cd ~/Projects
    ```
 
-   - Clona el repositorio con `git clone`:
+   - Clone the repository with `git clone`:
 
    ```console
-       git clone https://github.com/tu-usuario/mi-proyecto.git
+        git clone https://github.com/your-username/my-project.git
    ```
 
-3. **Confirmar que el repositorio está bien clonado**
+3. **Confirm that the repository is properly cloned**
 
-   - Para verificar que todo está correcto puedes ejecutar `git status`
-   - Si todo salió bien, verás algo como:
+   - To verify that everything is correct, you can run `git status`.
+   - If everything went well, you will see something like:
 
    ```console
-       On branch main
-       Your branch is up to date with 'origin/main'.
+        On branch main
+        Your branch is up to date with 'origin/main'.
 
-       nothing to commit, working tree clean
+        nothing to commit, working tree clean
    ```
 
 ## Git repo structure
 
-Aunque no existe una estructura fija para proyectos de ML, la siguiente funciona generalmente bien:
+Although there is no fixed structure for ML projects, the following generally works well:
 
 ```
 /project_name
-│── data/                # Datos (crudos, procesados)
-│   ├── raw/             # Datos sin procesar
-│   ├── processed/       # Datos después de limpieza
-│   └── external/        # Datos de terceros (opcional)
+│── data/                # Data (raw, processed)
+│   ├── raw/             # Unprocessed data
+│   ├── processed/       # Data after cleaning
+│   └── external/        # Third-party data (optional)
 │
 │── notebooks/           # Jupyter Notebooks
 │
-│── src/                 # Código fuente del proyecto
+│── src/                 # Project source code
 │
-│── models/              # Modelos entrenados (artefacto)
+│── models/              # Trained models (artifact)
 │
-│── reports/             # Reportes y visualizaciones
+│── reports/             # Reports and visualizations
 │
-│── tests/               # Tests unitarias
+│── tests/               # Unit tests
 │
-│── docs/                # Documentación
+│── docs/                # Documentation
 │
-│── config/              # Archivos de configuración
+│── config/              # Configuration files
 │
-│── infra/               # Infrastructure as a code
+│── infra/               # Infrastructure as code
 │
-│── .gitignore           # Ignorar archivos (datos grandes, logs)
-│── requirements.txt     # Dependencias del proyecto
-│── README.md            # Descripción del proyecto
-│── LICENSE              # Licencia del proyecto
+│── .gitignore           # Ignore files (large data, logs)
+│── requirements.txt     # Project dependencies
+│── README.md            # Project description
+│── LICENSE              # Project license
 
 ```
 
-## Commandos básicos
+## Basic commands
 
-La funcionalidad elmental y que más veces se estará usando es la de hacer un commit y subir los cambios al repositorio de Github.
+The basic functionality that will be used most often is to commit and push changes to the GitHub repository.
 
 ```console
 git add files_or_folder
@@ -100,6 +100,6 @@ git commit -m "meaningful message"
 git push
 ```
 
-Podemos comprobar el estado de la sincronización con `git status`
+We can check the synchronization status with `git status`.
 
-VS Code tiene una interfaz para gestionar git que se explica en la sección correspondiente.
+VS Code has an interface to manage Git, which is explained in the corresponding section.

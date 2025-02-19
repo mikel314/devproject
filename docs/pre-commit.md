@@ -1,62 +1,62 @@
 # Pre-commit hooks
 
-`pre-commit` es una herramienta que ejecuta hooks antes de realizar un commit en Git. Se utiliza para aplicar automáticamente verificaciones y formateos en el código, asegurando calidad y consistencia antes de que se guarde en el repositorio.
+`pre-commit` is a tool that runs hooks before making a commit in Git. It is used to automatically apply checks and formatting to the code, ensuring quality and consistency before it is saved in the repository.
 
 # Set up
 
-Se instala fácilmente con:
+It is easily installed with:
 
 ```console
 pip install pre-commit
 ```
 
-Luego, se debe inicializar en el repositorio, ejecutando en la raiz:
+Then, it must be initialized in the repository by running in the root:
 
 ```console
 pre-commit install
 ```
 
-Esto crea un archivo `.pre-commit-config.yaml`, donde se configuran los hooks.
-Un ejemplo de archivo de configuración puede ser:
+This creates a `.pre-commit-config.yaml` file, where the hooks are configured.
+An example configuration file could be:
 
 ```yaml
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.5.0
     hooks:
-      - id: trailing-whitespace # Elimina espacios en blanco innecesarios
-      - id: end-of-file-fixer # Asegura que los archivos terminen con una línea en blanco
-      - id: check-yaml # Verifica que los archivos YAML sean válidos
-      - id: check-ast # Verifica que los archivos Python sean sintácticamente correctos
+      - id: trailing-whitespace # Removes unnecessary whitespace
+      - id: end-of-file-fixer # Ensures files end with a blank line
+      - id: check-yaml # Checks that YAML files are valid
+      - id: check-ast # Checks that Python files are syntactically correct
 
   - repo: https://github.com/psf/black
     rev: 23.12.1
     hooks:
-      - id: black # Formatea archivos Python con Black
+      - id: black # Formats Python files with Black
 ```
 
-En este archivo se añaden todos los hooks que queremos ejecutar antes de hacer un commit. La versión (rev) podra ser actualizada con `pre-commit autoupdate` como se explica a continuación.
+In this file, all the hooks that we want to run before making a commit are added. The version (rev) can be updated with `pre-commit autoupdate` as explained below.
 
-## Ejecución de los hooks
+## Running the hooks
 
-Todos los hooks serán ejecutados autoamticamente cuando se haga un `git commit` que sacará por el terminal el resultado de los tests. Si algún hook falla (por un formato incorrecto por ejemplo), no se llevará a cabo el commit.
+All hooks will be automatically executed when a `git commit` is made, which will output the test results to the terminal. If any hook fails (due to incorrect formatting, for example), the commit will not be carried out.
 
-Algunos hooks (los de formato) cambiaran el archivo problematico que tendrá que ser añadido de nuevo con `git add` ante de ejecutar de nuevo el commit.
+Some hooks (the formatting ones) will change the problematic file, which will need to be added again with `git add` before executing the commit again.
 
-Si se quiere ejecutar los hook antes del commit para asegurarnos manualmente de que todo esta ok, podemos hacerlo con:
+If you want to run the hooks before the commit to manually ensure that everything is okay, you can do so with:
 
 ```console
 pre-commit run --all-files
 ```
 
-La primera vez que se ejecuta un hook el sistema lo instala y tarde un rato. Además crear una carpeta cache en el repositorio, `node_modules` para ir más rapido las siguintes veces. Esta carpeta es conveniente añadirla al `.gitignore`.
+The first time a hook is run, the system installs it and it takes a while. It also creates a cache folder in the repository, `node_modules`, to speed up subsequent runs. It is advisable to add this folder to `.gitignore`.
 
-## Actualización de los hooks
+## Updating the hooks
 
-Para actualizar a la última versión de cada hook podemos ejecutar
+To update to the latest version of each hook, you can run
 
 ```console
 pre-commit autoupdate
 ```
 
-Esto es especialmente útil la primera vez que añadimos un hook al archivo de configuración si no sabemos cual es la última versión.
+This is especially useful the first time we add a hook to the configuration file if we do not know what the latest version is.

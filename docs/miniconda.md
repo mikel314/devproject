@@ -1,16 +1,16 @@
 # Set up virtual envs with conda
 
-## Introducción
+## Introduction
 
-Hay varias formas de gestionar entornos virtuales en Python, para los proyectos de ML es común usar [Miniconda](https://docs.anaconda.com/miniconda/).
+There are several ways to manage virtual environments in Python. For ML projects, it is common to use [Miniconda](https://docs.anaconda.com/miniconda/).
 
-En esta documentación se describe la configuración más basica, para más información y opciones, se puede consultar este tutorial completo de como [gestionar entornos virutales con miniconda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
+This documentation describes the most basic setup. For more information and options, you can refer to this complete tutorial on how to [manage virtual environments with miniconda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html).
 
 ## Set up miniconda
 
-Todo el set de miniconda y la creación del entorno virtual de python se ejecutan desde el Vagrantfile en el momento de crear la VM. A continuación se describe con motivos didácticos el proceso.
+The entire miniconda setup and the creation of the Python virtual environment are executed from the Vagrantfile when creating the VM. Below, the process is described for educational purposes.
 
-Para instalar miniconda en la VM con:
+To install miniconda on the VM with:
 
 ```console
     sudo mkdir -p /home/mikel/miniconda3
@@ -19,41 +19,41 @@ Para instalar miniconda en la VM con:
     sudo rm /home/mikel/miniconda3/miniconda.sh
 ```
 
-Esta instalación no añade `conda` al `PATH` ni activa el miniconda. Para ello es necesario hacer (solo la primera vez)
+This installation does not add `conda` to the `PATH` nor activate miniconda. To do this (only the first time):
 
 ```console
 source /home/mikel/miniconda3/bin/activate
 conda init --all
 ```
 
-Una vez instalado, podremos crear un entorno nuevo con:
+Once installed, we can create a new environment with:
 
 ```console
-conda create -n mi_entorno python=3.12.9
+conda create -n my_env python=3.12.9
 ```
 
-(o la versión de python que desees).
+(or the Python version you want).
 
-Una vez creado se activa con:
+Once created, it is activated with:
 
 ```console
-conda activate mi_entorno
+conda activate my_env
 ```
 
-Una vez creado y activado podemos instalar paquetes con `conda install pkg_name` o tambien con `pip install pkg_name` tras instalar el pip con `conda install pip` (recomendado)
+Once created and activated, we can install packages with `conda install pkg_name` or also with `pip install pkg_name` after installing pip with `conda install pip` (recommended).
 
-Si queremos instalar los paquetes desde un archivo de requeriments, con el entorno activado ejecutaremos
+If we want to install packages from a requirements file, with the environment activated, we will run:
 
 ```console
-pip install -r ruta_al_requeriments.txt
+pip install -r path_to_requirements.txt
 ```
 
-Si en cambio, queremos actualizar el requeriments a medida que vayamos instalando paquetes, haremos:
+If, on the other hand, we want to update the requirements as we install packages, we will do:
 
 ```console
 pip freeze > requirements.txt
 ```
 
-## Conda environments desde VS code
+## Conda environments from VS Code
 
-En el tutorial [Python environments in VS Code](https://code.visualstudio.com/docs/python/environments) se puede consultar como elegir y gestionar los diferentes environmetns desde VS Code
+In the tutorial [Python environments in VS Code](https://code.visualstudio.com/docs/python/environments), you can learn how to choose and manage different environments from VS Code.

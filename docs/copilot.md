@@ -1,73 +1,73 @@
-# GitHub Copilot para Visual Studio Code
+# GitHub Copilot for Visual Studio Code
 
-_documentación generada con copilot y editada manualmente_
+_documentation generated with Copilot and manually edited_
 
-## Introducción
+## Introduction
 
-En la guia [GitHub Copilot in VS Code](https://code.visualstudio.com/docs/copilot/overview) se describe como instalar Copilot en VS code y las funcionalidades principales. Es muy recomendable leerlo.
+The guide [GitHub Copilot in VS Code](https://code.visualstudio.com/docs/copilot/overview) describes how to install Copilot in VS Code and its main features. It is highly recommended to read it.
 
-## Instalación
+## Installation
 
-Para instalar GitHub Copilot en Visual Studio Code, sigue estos pasos:
+To install GitHub Copilot in Visual Studio Code, follow these steps:
 
-1. Abre Visual Studio Code.
-2. Ve a la extensión de Marketplace haciendo clic en el icono de extensiones en la barra lateral izquierda.
-3. Busca "GitHub Copilot".
-4. Haz clic en "Instalar" en la extensión de GitHub Copilot.
-5. Una vez instalada, inicia sesión con tu cuenta de GitHub para activar la extensión.
+1. Open Visual Studio Code.
+2. Go to the Marketplace extension by clicking on the extensions icon in the left sidebar.
+3. Search for "GitHub Copilot".
+4. Click "Install" on the GitHub Copilot extension.
+5. Once installed, sign in with your GitHub account to activate the extension.
 
-## Funcionalidades Principales
+## Main Features
 
-### Autocompletado de Código
+### Code Autocompletion
 
-GitHub Copilot sugiere líneas completas de código y bloques de código basados en el contexto del archivo en el que estás trabajando.
+GitHub Copilot suggests complete lines of code and code blocks based on the context of the file you are working on.
 
-### Generación de Código
+### Code Generation
 
-Puedes generar código a partir de comentarios en lenguaje natural. Simplemente escribe un comentario describiendo lo que quieres que haga el código y GitHub Copilot generará el código correspondiente. Por ejemplo, unit tests, optimización de funciones o repositorios enteros.
+You can generate code from natural language comments. Simply write a comment describing what you want the code to do, and GitHub Copilot will generate the corresponding code. For example, unit tests, function optimizations, or entire repositories.
 
-### Refactorización de Código
+### Code Refactoring
 
-GitHub Copilot puede ayudarte a refactorizar tu código sugiriendo mejoras y optimizaciones basadas en las mejores prácticas.
+GitHub Copilot can help you refactor your code by suggesting improvements and optimizations based on best practices.
 
-### Inline chat
+### Inline Chat
 
 With Copilot Chat, you can start a chat conversation with Copilot in VS Code to ask specific tasks about your code by using natural language. Simply press `Ctrl+I` on your keyboard to bring up Copilot Inline Chat.
 
 Copilot Inline Chat gives you a chat interface that lets you ask questions about the code in the active editor.
 
-This work in any file opened or even in the **terminal**.
+This works in any file opened or even in the **terminal**.
 
-### Explicacion de Código
+### Code Explanation
 
 Copilot generates natural language descriptions of the code's functionality and purpose. This can be useful if you want to understand the code's behavior or for non-technical stakeholders who need to understand how the code works.
 
-### Documentación Automática
+### Automatic Documentation
 
-Genera automáticamente documentación para tus funciones y clases basándose en el código y los comentarios existentes.
+Automatically generates documentation for your functions and classes based on existing code and comments.
 
-## Comandos Principales de GitHub Copilot
+## Main Commands of GitHub Copilot
 
-GitHub Copilot ofrece varios comandos útiles que puedes usar para mejorar tu flujo de trabajo en Visual Studio Code.
-Basta con seleccionar un trozo de codigo, abrir el Inline chat con `Ctrl+I` y escribir el comando con `/command`
-Aquí hay una lista de los comandos principales.
+GitHub Copilot offers several useful commands that you can use to improve your workflow in Visual Studio Code.
+Simply select a piece of code, open the Inline Chat with `Ctrl+I`, and type the command with `/command`.
+Here is a list of the main commands.
 
 ### /doc
 
-El comando `/doc` genera documentación para la función o clase seleccionada. Esto es útil para crear comentarios de documentación automáticamente basados en el código existente.
+The `/doc` command generates documentation for the selected function or class. This is useful for automatically creating documentation comments based on existing code.
 
 ### /explain
 
-El comando `/explain` proporciona una explicación en lenguaje natural del código seleccionado. Esto puede ayudarte a entender mejor el propósito y funcionamiento del código.
+The `/explain` command provides a natural language explanation of the selected code. This can help you better understand the purpose and functionality of the code.
 
 ### /fix
 
-El comando `/fix` sugiere correcciones para el código seleccionado. Esto puede incluir la corrección de errores, la mejora del rendimiento o la refactorización del código según las mejores prácticas.
+The `/fix` command suggests corrections for the selected code. This can include fixing errors, improving performance, or refactoring the code according to best practices.
 
 ### /test
 
-El comando `/test` genera pruebas unitarias para la función o clase seleccionada. Esto es útil para asegurarte de que tu código funciona correctamente y para prevenir futuros errores.
+The `/test` command generates unit tests for the selected function or class. This is useful to ensure your code works correctly and to prevent future errors.
 
 ### /optimize
 
-El comando `/optimize` sugiere optimizaciones para el código seleccionado. Esto puede incluir mejoras en el rendimiento, la reducción de la complejidad del código o la adopción de mejores prácticas.
+The `/optimize` command suggests optimizations for the selected code. This can include performance improvements, reducing code complexity, or adopting best practices.

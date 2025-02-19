@@ -1,37 +1,37 @@
-# Github pages y Jekyll
+# GitHub Pages and Jekyll
 
-## Introducción
+## Introduction
 
-GitHub Pages es un servicio de alojamiento de sitios web estáticos proporcionado por GitHub. Permite publicar páginas web directamente desde un repositorio de GitHub sin necesidad de servidores adicionales. Además permite crear todo el contenido de la página usando archivos Markdown que son editables y visualizables desde el VS Code.
+GitHub Pages is a static website hosting service provided by GitHub. It allows you to publish web pages directly from a GitHub repository without the need for additional servers. Additionally, it allows you to create all the content of the page using Markdown files that are editable and viewable from VS Code.
 
-En este proyecto se usuaran muy pocas de las funcionalidades de Githubpagesc con Jekyll, para una documentación completa se puede visitar el tuturial [Setting up a GitHub Pages site with Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll)
+In this project, very few of the functionalities of GitHub Pages with Jekyll will be used. For complete documentation, you can visit the tutorial [Setting up a GitHub Pages site with Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll).
 
 ## Setup
 
-No es necesario isntalar nada ni en local ni en la VM para trabajar con Github pages. Todo se ejecuta en el reposistorio de Github en la nube. Para habilitarlo basta con:
+It is not necessary to install anything locally or on the VM to work with GitHub Pages. Everything runs in the GitHub repository in the cloud. To enable it, simply:
 
-- Ve a Settings → Pages dentro de tu repositorio en GitHub.
-- En la sección "Source", selecciona la rama main y la carpeta docs/ y haz clic en "Save".
-- GitHub generará automáticamente tu sitio en https://tu-usuario.github.io/tu-repositorio/.
+- Go to Settings → Pages within your repository on GitHub.
+- In the "Source" section, select the main branch and the docs/ folder, then click "Save".
+- GitHub will automatically generate your site at https://your-username.github.io/your-repository/.
 
 ## Set up Jekyll
 
-Crea y modifica el archivo \_config.yml de la carpeta docs/ para personalizar el sitio web.
-Ejemplo de configuración básica:
+Create and modify the \_config.yml file in the docs/ folder to customize the website.
+Example of basic configuration:
 
 ```yaml
-title: "Mi Blog con Jekyll"
-description: "Documentación generado con Jekyll y alojado en GitHub Pages"
+title: "My Blog with Jekyll"
+description: "Documentation generated with Jekyll and hosted on GitHub Pages"
 theme: jekyll-theme-minimal
 ```
 
-Para cambiar el diseño, puedes usar temas compatibles con GitHub Pages:
-[Lista de temas soportados](https://pages.github.com/themes/)
+To change the design, you can use themes compatible with GitHub Pages:
+[List of supported themes](https://pages.github.com/themes/)
 
-## Crear documentación
+## Create documentation
 
-Una vez activado, todos los archivos .md de la carpeta `docs/` seran transformados en htmls visualizables en la url https://tu-usuario.github.io/tu-repositorio/ de forma totalmente transparente al usuario.
+Once activated, all .md files in the `docs/` folder will be transformed into HTMLs viewable at the URL https://your-username.github.io/your-repository/ completely transparently to the user.
 
-Es recomendable crear un [index.md](index.md) con la estructura de la documentación y los links al resto de páginas.
+It is recommended to create an [index.md](index.md) with the structure of the documentation and links to the rest of the pages.
 
-Los archivos de documentación estan escritos en Markdowns, este [tutorial para principiantes](https://hackernoon.com/a-beginners-guide-to-markdown-everything-you-need-to-know-to-get-started) está bien para aprender lo básico. También es útil leer [cómo crear code bloks](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks) ya que es algo que usaremos mucho en una documentación de un proyecto de desarrollo.
+The documentation files are written in Markdown. This [beginner's tutorial](https://hackernoon.com/a-beginners-guide-to-markdown-everything-you-need-to-know-to-get-started) is good for learning the basics. It is also useful to read [how to create code blocks](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks) as it is something we will use a lot in a development project documentation.

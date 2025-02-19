@@ -1,28 +1,29 @@
 # Welcome to the devproject's documentation!
 
-Este sitio web contiene la documentación del repositorio Devproject, el objetivo de éste es incluir las principales herramientas de data engineering asociadas a un proyecto de Machine Learning.
+This website contains the documentation for the Devproject repository. The goal is to include the main data engineering tools associated with a Machine Learning project.
 
-El código y los datos seran random/dummy, la idea es construir un cascaron vacío pero configurando todas las herramientas relevantes y siguiendo _best practices_.
+The code and data will be random/dummy. The idea is to build an empty shell but configure all relevant tools and follow best practices.
 
-Se recomienda leer el overview siguiente antes y seguir con los puntos del índice por orden, empezando por el bloque con las herramientas imprescindibles de desarrollo ([Git y Github](git.md), [Virtual machines](vagrant.md), [Visual Studio Code](vscode.md))
+It is recommended to read the following overview first and then follow the points in the index in order, starting with the block containing the essential development tools ([Git and Github](git.md), [Virtual machines](vagrant.md), [Visual Studio Code](vscode.md)).
 
-El resto de la documentación debería ser relativamente independiente.
+The rest of the documentation should be relatively independent.
 
 ## Overview
 
-El desarrollo de este proyecto se realizó en una máquina fisica personal con **Windows 10**. Con el objetivo de evitar problemas con el _test&learn_ propio de este proyecto y dado las limitaciones de Windows como OS de desarrollo, se optó por la creación de una máquina virtual **Linux** desplegada con **Virtualbox**.
+The development of this project was carried out on a personal physical machine with **Windows 10**. To avoid problems with the _test&learn_ nature of this project and given the limitations of Windows as a development OS, a **Linux** virtual machine was created using **Virtualbox**.
 
-El ide de desarrollo elegido fue **VS code** conectandose de forma remota a la maquina virtual y a **Github** en la nube. En las siguientes capitulos se describe el detalle de estas configuraciones.
+The chosen development IDE was **VS Code**, connecting remotely to the virtual machine and to **Github** in the cloud. The following chapters describe the details of these configurations.
 
-Aunque la VM se podría haber creado manualmente, se dedició usar **Vagrant** como _infrastructure as a code_ con el fin de aprender la tecnología y facilitar el re-despliegue esperado de la VM.
+Although the VM could have been created manually, it was decided to use **Vagrant** as _infrastructure as code_ to learn the technology and facilitate the expected re-deployment of the VM.
 
-## Contenidos
+## Contents
 
-- [Git y Github](git.md)
-- Virtual machines con [Vagrant](VMs.md)
-- Ide de desarrollo: [Visual Studio Code](vscode.md)
-- Documentación con [Github pages y Jekyll](githubpages.md)
-- Entornos virtuales con [Miniconda](miniconda.md)
+- [Git and Github](git.md)
+- Virtual machines with [Vagrant](VMs.md)
+- Development IDE: [Visual Studio Code](vscode.md)
+- Documentation with [Github pages and Jekyll](githubpages.md)
+- Virtual environments with [Miniconda](miniconda.md)
+- []()
 - []()
 - []()
 - []()

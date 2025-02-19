@@ -1,16 +1,16 @@
 # Visual Studio Code
 
-## Introducción
+## Introduction
 
-Existe una completa guía de VS code que se puede consultar en la [web de VS code](https://code.visualstudio.com/docs/?dv=win64user).
-Es muy recomendable visitarla y leer los tutoriales basicos. En particular el [Get started with VS code](https://code.visualstudio.com/docs/getstarted/getting-started#_enhance-your-coding-with-ai-and-github-copilot), el de [Python en VS code](https://code.visualstudio.com/docs/languages/python) y el que hace referencia a los entornos virtuales [Python environments in VS Code](https://code.visualstudio.com/docs/python/environments)
+There is a complete guide to VS Code that can be consulted on the [VS Code website](https://code.visualstudio.com/docs/?dv=win64user).
+It is highly recommended to visit it and read the basic tutorials. In particular, the [Get started with VS Code](https://code.visualstudio.com/docs/getstarted/getting-started#_enhance-your-coding-with-ai-and-github-copilot), the [Python in VS Code](https://code.visualstudio.com/docs/languages/python), and the one referring to virtual environments [Python environments in VS Code](https://code.visualstudio.com/docs/python/environments).
 
-La primera configuración a realizar es la instalación de la extensión [Remote - ssh](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh) para poder conectar con la VM. La documentación de cómo hacerlo se puede encontrar en el tutorial [Remote development with VS code](https://code.visualstudio.com/docs/remote/ssh)
+The first configuration to perform is the installation of the [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh) extension to connect to the VM. The documentation on how to do this can be found in the tutorial [Remote development with VS Code](https://code.visualstudio.com/docs/remote/ssh).
 
-En dichos tutoriales se ira pidiendo que se instalen extensiones que son útiles. Se pueden encontrar en el [Marketplace de VS code](https://code.visualstudio.com/docs/editor/extension-marketplace). En este proyecto hemos usado:
+In these tutorials, you will be asked to install useful extensions. They can be found in the [VS Code Marketplace](https://code.visualstudio.com/docs/editor/extension-marketplace). In this project, we have used:
 
-- [Remote - ssh](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)
+- [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh)
 - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-- [Jypyter notebooks](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
+- [Jupyter Notebooks](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
 -
 -

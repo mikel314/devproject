@@ -1,172 +1,163 @@
-# Set up VM with vagrant
+# Set up VM with Vagrant
 
-## Introducción
+## Introduction
 
-Como se comenta en el [Overview](index.md) de esta documentaicón, el desarrollo de este proyecto se realizó en una máquina fisica personal con **Windows 10**. Con el objetivo de evitar problemas con el _test&learn_ propio de este proyecto y dado las limitaciones de Windows como OS de desarrollo, se optó por la creación de una máquina virtual **Linux** desplegada con **Virtualbox**.
+As mentioned in the [Overview](index.md) of this documentation, the development of this project was carried out on a personal physical machine with **Windows 10**. To avoid problems with the _test&learn_ nature of this project and given the limitations of Windows as a development OS, it was decided to create a **Linux** virtual machine deployed with **Virtualbox**.
 
-Aunque la VM se podría haber creado manualmente, se dedició usar **Vagrant** como _infrastructure as a code_ con el fin de aprender la tecnología y facilitar el re-despliegue esperado de la VM.
+Although the VM could have been created manually, it was decided to use **Vagrant** as _infrastructure as code_ to learn the technology and facilitate the expected re-deployment of the VM.
 
-Vagrant permite crear maquina virtuales mediante código, como Terraform pero para entornos locales, funciona especialmente bien con Virtualbox.
-Tambien permite instalar aplicaciones en la VM en el momento de la creación.
-Para ello seguiremos los siguientes pasos
+Vagrant allows creating virtual machines through code, similar to Terraform but for local environments, and works especially well with Virtualbox. It also allows installing applications on the VM at the time of creation. To do this, we will follow these steps:
 
-- Instalar Virtuabox
-- Instalar Vagrant
-- Crear las claves ssh
-- Editar el `Vagrantfile`
-- Ejecutar Vagrant y crear la VM
-- Conectarse a la VM
+- Install Virtualbox
+- Install Vagrant
+- Create SSH keys
+- Edit the `Vagrantfile`
+- Run Vagrant and create the VM
+- Connect to the VM
 
-La idea es configurar la VM lo máximo posible desde el inicio, Asi si tenemos que eliminarla y volverla a crear, no perderemos tiempo en su setup.
-En este caso la instalción es en Windows dado que el host de toda la infra es Windows.
+The idea is to configure the VM as much as possible from the start, so if we have to delete it and recreate it, we won't waste time on its setup. In this case, the installation is on Windows since the host of the entire infrastructure is Windows.
 
-## Instalar Virtualbox
+## Install Virtualbox
 
-Sencillamente sigue los pasos indicados en la [Web de Virtualbox](https://www.virtualbox.org/wiki/Downloads)
+Simply follow the steps indicated on the [Virtualbox website](https://www.virtualbox.org/wiki/Downloads).
 
-Dado que toda la configuración se incluira en el `Vagrantfile`, no es necesario hacer nada más.
+Since all the configuration will be included in the `Vagrantfile`, nothing else is necessary.
 
-## Instalar Vagrant
+## Install Vagrant
 
-1.  Descargar e instalar Vagrant desde https://www.vagrantup.com/
-2.  Crear la carpeta que contendrá la configuración de la VM. En este caso la incluimos dentro del repositorio git en la carpeta infra.
+1. Download and install Vagrant from https://www.vagrantup.com/
+2. Create the folder that will contain the VM configuration. In this case, we include it within the git repository in the infra folder.
 
 ```console
     mkdir vagrant && cd vagrant
 ```
 
-3.  Crear el `Vagrantfile` en la carpeta del proyecto. Este archivo contiene una especificación muy basica de la VM.
+3. Create the `Vagrantfile` in the project folder. This file contains a very basic specification of the VM.
 
 ```console
     vagrant init ubuntu/focal64
 ```
 
-4. Editar el `Vagrantfile` que se ha creado para añadir configuración e instalar las aplicaciones iniciales. Ver siguiente seccion
+4. Edit the created `Vagrantfile` to add configuration and install initial applications. See the next section.
 
-## Crear las claves ssh
+## Create SSH keys
 
-Antes de editar el Vagrantfile, es conveniente crear las claves ssh que permitirán conectarnos con la VM de forma normal una vez creada. La creación la realizaremos directaemnte en el Windows10.
+Before editing the Vagrantfile, it is advisable to create the SSH keys that will allow us to connect to the VM normally once created. The creation will be done directly on Windows 10.
 
-Para ello, abrimos el `cmd` y ejecutamos
+To do this, open `cmd` and run:
 
 ```console
 ssh-keygen
 ```
 
-Las claves se guardan por defecto (recomendado) en la carpeta .ssh del home del usuario que las crea.
-En este caso les dimos el nombre `ubuntu_server_key`
-Cuando pida password apretamos enter para no crearlas con password (las claves en sí mismas ya son la seguridad)
+The keys are saved by default (recommended) in the .ssh folder of the user's home directory. In this case, we named them `ubuntu_server_key`. When it asks for a password, press enter to not create them with a password (the keys themselves are the security).
 
-La clave pública (acabada en .pub) es la que tenemos que copiar en la VM a la que queraoms contectar desde el Windows.
-Este se hace normalmente con
+The public key (ending in .pub) is the one we need to copy to the VM we want to connect to from Windows. This is usually done with:
 
 ```console
 ssh-copy-id -i ~/.ssh/id_rsa_name.pub user@server
 ```
 
-Sin embargo, en este caso, configuraremos el `Vagrantfile` para que copia automaticamente las claves en el momento de crear la VM.
+However, in this case, we will configure the `Vagrantfile` to automatically copy the keys when creating the VM.
 
-## Editar el `Vagrantfile`
+## Edit the `Vagrantfile`
 
-El `Vagrantfile` contendrá toda la configuración de la VM:
+The `Vagrantfile` will contain all the VM configuration:
 
-- Parámetros de la VM
-- Actualización del SO
-- Creación del usuario mikel con permisos de sudo
-- Copia de la clave publica para poder conectar por ssh
-- Instalación de miniconda
--
--
+- VM parameters
+- OS update
+- Creation of the user mikel with sudo permissions
+- Copy of the public key to connect via SSH
+- Installation of Miniconda
 
-Puedes encontrar el arhivo [Vagrantfile](./../infra/vagrant/Vagrantfile) en este mismo repositorio en la carpeta `infra/vagrant/` con los comentarios en el código.
+You can find the [Vagrantfile](./../infra/vagrant/Vagrantfile) in this repository in the `infra/vagrant/` folder with comments in the code.
 
-## Scrip shell post_installs.sh
+## Post-installation shell script `post_installs.sh`
 
-No he sido capaz de activar conda para el usuario mikel desde el usuario vagrant directamente en el `Vagrantfile`. Una solución ha sido incluir todos los comandos de activación de conda y creación del entorno python en un _shell script_ y ejecutarlo como usuario mikel desde el vagrant.
+I have not been able to activate conda for the user mikel from the vagrant user directly in the `Vagrantfile`. A solution has been to include all the conda activation commands and the creation of the python environment in a shell script and execute it as the user mikel from vagrant.
 
-El script shell `post_installs.sh` de la carpeta `infra` contiene las instrucciones descritas en la [documentación de miniconda](miniconda.md).
+The shell script `post_installs.sh` in the infra folder contains the instructions described in the [Miniconda documentation](miniconda.md).
 
 ```bash
 #!/bin/bash
 
-echo "Creado entorno virtual con conda"
+echo "Creating virtual environment with conda"
 
-# Activar Conda
+# Activate Conda
 source /home/mikel/miniconda3/bin/activate
 conda init --all
 
-# Crear un entorno Conda (si no existe)
+# Create a Conda environment (if it doesn't exist)
 conda create --name MLenv python=3.13 -y
 
-# Activar el entorno recién creado
+# Activate the newly created environment
 conda activate MLenv
 
-# Opcional: Instalar paquetes en el entorno
+# Optional: Install packages in the environment
 conda install pip -y
 
-# instalamos los paquetes del proyecto
-pip install -r /home/mikel/devproject/requeriments.txt -y
+# Install project packages
+pip install -r /home/mikel/devproject/requirements.txt -y
 
-echo "El entorno MLenv ha sido activado."
+echo "The MLenv environment has been activated."
 ```
 
-Este script es ejecutado desde el Vagrantfile con
+This script is executed from the Vagrantfile with:
 
 ```console
 sudo chmod +x /home/mikel/devproject/infra/post_installs.sh
 sudo -u mikel -i /home/mikel/devproject/infra/post_installs.sh
 ```
 
-## Ejecutar Vagrant y crear la VM
+## Run Vagrant and create the VM
 
-Una vez editado el `Vagrantfile` creamos la VM con
+Once the `Vagrantfile` is edited, create the VM with:
 
 ```console
     vagrant up
 ```
 
-Otros comandos útiles son los siguientes
+Other useful commands are:
 
-- Apagar la VM
+- Shut down the VM
 
 ```console
     vagrant halt
 ```
 
-- Reiniciar la VM
+- Restart the VM
 
 ```console
     vagrant reload
 ```
 
-- Destruir la VM
+- Destroy the VM
 
 ```console
      vagrant destroy -f
 ```
 
-- Conectarse a la VM (a traves de Vagrant)
+- Connect to the VM (through Vagrant)
 
 ```console
     vagrant ssh
 ```
 
-## Conectarse a la VM
+## Connect to the VM
 
-Finalmente, comprobamos que la VM se ha creado correctamente y que podemos acceder a ella.
+Finally, check that the VM has been created correctly and that we can access it.
 
 ```console
         ssh -i ~/.ssh/ubuntu_server_key mikel@192.168.56.10
 ```
 
-Para poder conectar sin especificar siempre la clave privada, y para facilitar la conexión por VS code. Ejecutamos en el Windows:
+To connect without always specifying the private key, and to facilitate connection via VS Code, run on Windows:
 
 ```console
         ssh-add ~/.ssh/ubuntu_server_key
 ```
 
-Tendremos que tener instalado el `ssh-agent` par ello.
-Ahora ya podremos acceder directamente con
+We will need to have the `ssh-agent` installed for this. Now we can directly access with:
 
 ```console
         ssh mikel@192.168.56.10
