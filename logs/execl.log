@@ -1,0 +1,5 @@
+2025-02-21 18:53:52.741 | DEBUG    | __main__:<module>:4 - Este es un mensaje de depuración
+2025-02-21 18:53:52.744 | INFO     | __main__:<module>:5 - Este es un mensaje informativo
+2025-02-21 18:53:52.747 | WARNING  | __main__:<module>:6 - Este es un mensaje de advertencia
+2025-02-21 18:53:52.756 | ERROR    | __main__:<module>:7 - Este es un mensaje de error
+2025-02-21 18:53:52.757 | CRITICAL | __main__:<module>:8 - Este es un mensaje crítico
