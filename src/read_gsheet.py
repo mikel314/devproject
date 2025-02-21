@@ -27,5 +27,5 @@ def read_gsheet(credentials, filename, sheetname):
 tracker_master = read_gsheet(cf.cred_file, "Tracker", "Master")
 print(tracker_master.head)
 
-tracker_master.to_parquet(cf.path_data_raw + "tracker_master.parquet")
+tracker_master.to_parquet(cf.path_data_raw + "tracker_master_raw.parquet")
 # df = pd.read_parquet("data.parquet", engine="pyarrow")
