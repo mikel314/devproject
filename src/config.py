@@ -12,3 +12,7 @@ path_data_tmp = path_data + "tmp/"
 
 # file with credentials
 cred_file = path_home + "mikelinv-1fa650952440.json"
+
+# log file
+log.file = path_repo + "logs/exec.log"
+

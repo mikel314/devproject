@@ -1,6 +1,7 @@
 import gspread
 import pandas as pd
 import config as cf
+from loguru import logger
 
 
 def read_gsheet(credentials, filename, sheetname):

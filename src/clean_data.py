@@ -1,5 +1,6 @@
 import pandas as pd
 import config as cf
+from loguru import logger
 
 # clean tracker_master
 df = pd.read_parquet(cf.path_data_raw + "tracker_master_raw.parquet")
