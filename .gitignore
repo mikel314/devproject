@@ -1,3 +1,5 @@
 /infra/vagrant/.vagrant/
 node_modules/
-data/
+data/processed/*
+data/raw/*
+data/tmp/*

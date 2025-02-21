@@ -18,16 +18,14 @@ def read_gsheet(credentials, filename, sheetname):
 
     # Convertir a DataFrame de Pandas
     df = pd.DataFrame(data)
+    df = df.astype(str)
 
     return df
-
-
-def save_df(df, path, filename):
-    df.to_parquet(path + filename + ".parquet")
-    # df = pd.read_parquet("data.parquet", engine="pyarrow")
 
 
 # Read master data from Google Sheets
 tracker_master = read_gsheet(cf.cred_file, "Tracker", "Master")
 print(tracker_master.head)
-tracker_master.to_parquet(cf.path_data + "tracker_master.parquet")
+
+tracker_master.to_parquet(cf.path_data_raw + "tracker_master.parquet")
+# df = pd.read_parquet("data.parquet", engine="pyarrow")
