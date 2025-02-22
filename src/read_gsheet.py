@@ -2,7 +2,8 @@ import gspread
 import pandas as pd
 import config as cf
 from loguru import logger
-import sys
+
+# import sys
 
 
 def read_gsheet(credentials, filename, sheetname):
@@ -24,13 +25,14 @@ def read_gsheet(credentials, filename, sheetname):
 
     return df
 
+
 logger.add(cf.log_file, rotation="10 MB")  # Rota el archivo cada 10 MB
-#logger.add(sys.stdout, colorize=True)  # Muestra los mensajes en la consola tambien
+# logger.add(sys.stdout, colorize=True)  # Show log also in console
 
 # Read master data from Google Sheets
 tracker_master = read_gsheet(cf.cred_file, "Tracker", "Master")
 logger.info("Tracker/Master data read from Google Sheets")
-#print(tracker_master.head)
+# print(tracker_master.head)
 
 tracker_master.to_parquet(cf.path_data_raw + "tracker_master_raw.parquet")
 logger.info("Tracker/Master data saved as parquet")

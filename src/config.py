@@ -18,5 +18,3 @@ cred_file = path_home + "mikelinv-1fa650952440.json"
 
 # log file
 log_file = path_repo + "logs/exec.log"
-
-
