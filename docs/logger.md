@@ -1,4 +1,4 @@
-# Logging using ``loguru`` package
+# Logging using `loguru` package
 
 ## Introduction
 
@@ -32,5 +32,3 @@ try:
 except ZeroDivisionError:
     logger.exception("Division by zero error!")
 ```
-
-
