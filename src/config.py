@@ -10,9 +10,13 @@ path_data_raw = path_data + "raw/"
 path_data_processed = path_data + "processed/"
 path_data_tmp = path_data + "tmp/"
 
+# path to reports
+path_reports = path_repo + "reports/"
+
 # file with credentials
 cred_file = path_home + "mikelinv-1fa650952440.json"
 
 # log file
-log.file = path_repo + "logs/exec.log"
+log_file = path_repo + "logs/exec.log"
+
 

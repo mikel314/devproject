@@ -1,18 +1,19 @@
 # Devproject
 
-El objetivo de este proyecto es aprender a incluir las principales herramientas de data engineering asociadas a un proyecto de Machine Learning.
+The objective of this project is to learn how to include the main data engineering tools associated with a Machine Learning project.
 
-El código y los datos seran random/dummy, la idea es construir un cascaron vacío pero configurando todas las herramientas relevantes y siguiendo _best practices_.
+The code and data will be random/dummy, the idea is to build an empty shell but configure all the relevant tools and follow best practices.
 
-En particular:
+In particular:
 
-- Git y Github como control de versiones
-- VS code como ide de desarrollo
-- Copilot como IA assistant
+- Git and GitHub for version control
+- VS Code as the development IDE
+- Copilot as the AI assistant
 - Jupyter notebooks for exploration
-- Vagrant y Virtualbox como _infrastructure as a code_ para desplegar la VM
-- Miniconda como gestor de entornos virtuales de Python
-- Github pages y Jekyll con archivos .md como documentación
+- Vagrant and VirtualBox as infrastructure as code to deploy the VM
+- Miniconda as the Python virtual environment manager
+- GitHub Pages and Jekyll with .md files for documentation
+- Logging execution with loguru
 - ...
 
-Toda la documentación detallada del proyecto está disponible en la página del repositorio https://mikel314.github.io/devproject/
+All detailed project documentation is available on the repository page https://mikel314.github.io/devproject/

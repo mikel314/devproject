@@ -25,7 +25,7 @@ Although the VM could have been created manually, it was decided to use **Vagran
 - [Jupyter notebooks](notebooks.md) for exploration
 - Documentation with [Github pages and Jekyll](githubpages.md)
 - Virtual environments with [Miniconda](miniconda.md)
-- []()
+- Logging with [loguru](logger.md)
 - []()
 - []()
 - []()
