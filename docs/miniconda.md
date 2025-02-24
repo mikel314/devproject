@@ -57,3 +57,5 @@ pip freeze > requirements.txt
 ## Conda environments from VS Code
 
 In the tutorial [Python environments in VS Code](https://code.visualstudio.com/docs/python/environments), you can learn how to choose and manage different environments from VS Code.
+
+The main thing to know is how to select the conda environment: Write the command _> Python: Select interpreter_ and select the desired one.

@@ -16,6 +16,6 @@ conda activate MLenv
 conda install pip -y
 
 # instalamos los paquetes del proyecto
-# pip install -r /home/mikel/devproject/requeriments.txt -y
+pip install -r /home/mikel/devproject/requeriments.txt -y
 
 echo "El entorno MLenv ha sido activado."
