@@ -4,3 +4,5 @@ data/processed/*
 data/raw/*
 data/tmp/*
 logs/
+airflow/logs/
+airflow/airflow.db
